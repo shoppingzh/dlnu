@@ -1,5 +1,13 @@
+:root{
+    --banner_hei: 110px;
+    --mc: #19254D;
+    --sc: #003366;
+}
+
 body{
     margin: 0;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #eee;
 }
 * {
     box-sizing: border-box;
@@ -9,18 +17,55 @@ body{
     width: 100%;
 }
 .wrapper>.header{
-
+    position: relative;
+    color: #fff;
 }
 .banner{
-    min-height: 110px;
-    max-height: 150px;
-    background: #cf6210;
+    position: relative;
+    height: var(--banner_hei);
+    background: var(--mc);
+}
+.banner .logo{
+    display: block;
+    position: absolute;
+}
+.banner>.main{
+    display: inline-block;
+    margin-left: 200px;
+    height: 100%;
+}
+.banner>.main>.title{
+    font-size: 24px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.banner>.main>.title .zh{
+    letter-spacing: 8px;
+    margin-bottom: 5px;
+}
+.banner>.main>.title .en{
+    font-size: 20px;
 }
 
 /* nav bar */
+.nav-link{
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    line-height: 35px;
+    background: transparent;
+    padding: 5px 15px;
+}
 .nav-bar{
     height: 45px;
-    background: #c05200;;
+    background: var(--sc);
 }
 ul.nav{
     display: flex;
@@ -39,25 +84,54 @@ ul.nav::after{
 ul.nav>li{
     float: left;
     display: inline-block;
+    position: relative;
     text-align: center;
     max-width: 150px;
+    vertical-align: middle;
 }
-ul.nav>li>a{
-    white-space: nowrap;
+.menus{
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    border: 1px solid #eee;
+}
+.menus.open{
     display: block;
-    text-decoration: none;
+}
+ul.nav>li>.menus{
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    border-top: none;
+}
+.menus a{
+    color: #393939;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+}
+.menus>li:hover{
+    background-color: var(--sc);
+}
+.menus>li:hover a{
     color: #fff;
-    font-size: 18px;
-    line-height: 35px;
+}
+ul.nav>li>.nav-link{
+    color: #fff;
     padding: 5px 45px;
-    background: transparent;
 }
 ul.nav>li:hover{
     background: #fff;
-
 }
-ul.nav>li:hover>a{
-    color: #333;
+ul.nav>li:hover>.nav-link{
+    color: var(--sc);
 }
 
 .logo>img{
@@ -65,17 +139,16 @@ ul.nav>li:hover>a{
     height: 150px;
     background: #fff;
 }
-.banner .logo{
-    margin: 0 5px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 30px;
-    line-height: 110px;
-}
 
 /* main */
 .wrapper>.main{
     width: 75%;
     margin: 10px auto;
+    min-height: 600px;
+}
 
+/* footer */
+.wrapper>.footer{
+    min-height: 110px;
+    background: var(--mc);
 }
