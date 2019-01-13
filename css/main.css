@@ -8,7 +8,7 @@
 body{
     margin: 0;
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: #eee;
+    background: #fefefe;
 }
 * {
     box-sizing: border-box;
@@ -32,6 +32,35 @@ body{
         width: 95%;
     }
 }
+
+/* footer */
+.wrapper>.footer{
+    background: var(--mc);
+    color: #eee;
+    font-size: 14px;
+    text-align: center;
+}
+.wrapper>.footer p{
+    margin: 0;
+    line-height: 1.8;
+}
+.wrapper>.footer .contact{
+    padding: 35px 50px;
+}
+.contact .item{
+    display: inline-block;
+    line-height: 1;
+    border-right: 1px solid #666;
+    padding: 0 15px;
+}
+.wrapper>.footer .copyright{
+    background: #444;
+    padding: 5px;
+}
+.copyright{
+    color: #eee;
+}
+
 
 .banner{
     position: relative;
@@ -152,11 +181,6 @@ ul.nav>li:hover>.nav-link{
     height: 150px;
 }
 
-/* footer */
-.wrapper>.footer{
-    min-height: 110px;
-    background: var(--mc);
-}
 .image-wall img{
     width: 100%;
 }
@@ -303,7 +327,5 @@ ul.nav>li:hover>.nav-link{
         width: 100%;
     }
 }
-
-
 
 

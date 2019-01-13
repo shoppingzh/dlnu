@@ -16,6 +16,6 @@ $(function(){
             $(this).removeClass('open');
         }
     });
-
-
 });
+
+// 微信二维码显示

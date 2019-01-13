@@ -50,6 +50,24 @@
 		.nav-box .edu{
 			background-image: url("images/tmp/12.jpg");
 		}
+
+		/* 联系方式 */
+		.contact .contact-weibo,.contact-weixin{
+			display: inline-block;
+			margin-right: 10px;
+			width: 32px;
+			height: 32px;
+			background-color: #fff;
+			background-repeat: no-repeat;
+			border-radius: 100%;
+		}
+		.contact .contact-weixin{
+			background-image: url("images/contact_wx2.png");
+		}
+		.contact .contact-weibo{
+			background-image: url("images/contact_wb.png");
+		}
+
 	</style>
 </head>
 <body class="">
@@ -58,7 +76,7 @@
 		<div class="header">
 			<div class="banner">
 				<a class="logo" href="index.html">
-					<img src="images/logo.png">
+					<!--<img src="images/logo.gif">-->
 				</a>
 				<div class="main">
 					<div class="title">
@@ -102,15 +120,16 @@
 		</div><!-- /.header -->
 		<div class="main">
 
+			<!-- 图片墙 -->
 			<div class="image-wall">
-				<div><img src="images/tmp/1.jpg"> </div>
-				<div><img src="images/tmp/2.jpg"> </div>
-				<div><img src="images/tmp/3.jpg"> </div>
-				<div><img src="images/tmp/4.jpg"> </div>
-				<div><img src="images/tmp/5.jpg"> </div>
-				<div><img src="images/tmp/6.jpg"> </div>
-				<div><img src="images/tmp/7.jpg"> </div>
-				<div><img src="images/tmp/8.jpg"> </div>
+				<a href="##"><img src="images/tmp/1.jpg"></a>
+				<a href="##"><img src="images/tmp/2.jpg"></a>
+				<a href="##"><img src="images/tmp/3.jpg"></a>
+				<a href="##"><img src="images/tmp/4.jpg"></a>
+				<a href="##"><img src="images/tmp/5.jpg"></a>
+				<a href="##"><img src="images/tmp/6.jpg"></a>
+				<a href="##"><img src="images/tmp/7.jpg"></a>
+				<a href="##"><img src="images/tmp/8.jpg"></a>
 			</div>
 
 			<div class="cake">
@@ -241,16 +260,23 @@
 
 		</div><!-- /.main -->
 
-
 		<div class="footer">
-
-
+			<div class="contact cake">
+				<div class="c8" style="text-align: center;">
+					<p class="item">地址：辽宁省大连市金州新区辽河西路18号</p>
+					<p class="item">邮编：116600</p>
+					<p class="item">电话：0411-87924908</p>
+				</div>
+				<div class="c4">
+					<a title="点击访问官方微博" target="_blank" href="https://weibo.com/u/5691249220" class="contact-weibo"></a>
+					<div class="card" style="display: none;"><img src="images/wx_public.png"></div>
+					<a href="javascript:;" class="contact-weixin"></a>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>Copyright © 大连民族大学  版权所有</p>
+			</div>
 		</div><!-- /.footer -->
-	</div>
-
-	<div>
-
-
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
