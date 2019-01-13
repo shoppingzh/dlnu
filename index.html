@@ -9,9 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="fontawesome-5.6.3-web/css/all.min.css"/>
 	<link rel="stylesheet" href="css/components.css">
 	<link rel="stylesheet" href="css/main.css">
-
 </head>
-<body class="">
+<body>
 
 	<div class="wrapper">
 		<div class="header">
@@ -48,8 +47,6 @@
 					<li><a class="nav-link" href="index.html">研究生</a></li>
 				</ul>
 			</div><!-- /.nav-bar -->
-
-
 
 
 		</div><!-- /.header -->
@@ -202,10 +199,10 @@
 					<p class="item">邮编：116600</p>
 					<p class="item">电话：0411-87924908</p>
 				</div>
-				<div class="c4">
+				<div class="c4" style="position: relative;">
 					<a title="点击访问官方微博" target="_blank" href="https://weibo.com/u/5691249220" class="contact-weibo"></a>
-					<div class="card" style="display: none;"><img src="images/wx_public.png"></div>
-					<a href="javascript:;" class="contact-weixin"></a>
+					<div id="publicQrCode" style="display: none; position: absolute; bottom: 120%; width: 100%; text-align: center;"><img src="images/wx_public.png"></div>
+					<a id="wxPublic" href="javascript:;" class="contact-weixin"></a>
 				</div>
 			</div>
 			<div class="copyright">
@@ -232,6 +229,11 @@
             centerMode: false,
             centerPadding: '60px',
             focusOnSelect: true,
+        });
+
+        $('#wxPublic').on({
+		        mouseenter: function(){ $('#publicQrCode').fadeIn(300); },
+		        mouseleave: function(){ $('#publicQrCode').fadeOut(1000); }
         });
 		});
 	</script>

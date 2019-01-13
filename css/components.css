@@ -65,7 +65,6 @@
 
 /* box */
 .box{
-
 }
 .box>.header{
     position: relative;
@@ -139,4 +138,9 @@
     overflow: hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
+}
+
+/* 卡片 */
+.card{
+    background: #efefef;
 }
