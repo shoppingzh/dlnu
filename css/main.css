@@ -1,5 +1,5 @@
 :root{
-    --banner_hei: 110px;
+    --banner_hei: 140px;
     --mc: #003366;
     --sc: #006699;
 }
@@ -32,44 +32,38 @@ body{
         width: 95%;
     }
 }
-
-/* footer */
 .wrapper>.footer{
     background: var(--mc);
     color: #eee;
     font-size: 14px;
     text-align: center;
 }
-.wrapper>.footer p{
-    margin: 0;
-    line-height: 1.8;
-}
-.wrapper>.footer .contact{
-    padding: 35px 50px;
-}
-.contact .item{
-    display: inline-block;
-    line-height: 1;
-    border-right: 1px solid #666;
-    padding: 0 15px;
-}
-.wrapper>.footer .copyright{
-    background: #444;
-    padding: 5px;
-}
-.copyright{
-    color: #eee;
-}
 
-
+/* 顶部横幅 */
 .banner{
     position: relative;
     height: var(--banner_hei);
-    background: var(--mc);
+    background-color: var(--mc);
+    background-image: url("../images/banner_bg.png");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    -webkit-background-size: 20%;
+    background-size: 20%;
+}
+@media (max-width: 992px){
+    .banner{
+        background-image: none;
+    }
 }
 .banner .logo{
-    display: block;
     position: absolute;
+    display: block;
+    left: 15%;
+    top: 15px;
+}
+.banner .logo img{
+    height: 100%;
+    width: 500px;
 }
 .banner>.main{
     display: inline-block;
@@ -94,7 +88,7 @@ body{
     font-size: 20px;
 }
 
-/* nav bar */
+/* 导航栏 */
 .nav-link{
     white-space: nowrap;
     display: block;
@@ -130,7 +124,19 @@ ul.nav>li{
     text-align: center;
     max-width: 150px;
     vertical-align: middle;
+    color: #fff;
 }
+ul.nav>li.active{
+    background: #fff;
+}
+ul.nav>li>.nav-link{
+    padding: 5px 45px;
+    color: #efefef;
+}
+ul.nav>li.active>.nav-link{
+    color: var(--sc);
+}
+
 .menus{
     display: none;
     padding: 0;
@@ -165,10 +171,6 @@ ul.nav>li>.menus{
 .menus>li:hover a{
     color: #fff;
 }
-ul.nav>li>.nav-link{
-    color: #fff;
-    padding: 5px 45px;
-}
 ul.nav>li:hover{
     background: #fff;
 }
@@ -176,156 +178,83 @@ ul.nav>li:hover>.nav-link{
     color: var(--sc);
 }
 
-.logo>img{
-    width: 150px;
-    height: 150px;
+/* 底部 */
+.wrapper>.footer p{
+    margin: 0;
+    line-height: 1.8;
+}
+.wrapper>.footer .contact{
+    padding: 35px 50px;
+}
+.contact .item{
+    display: inline-block;
+    line-height: 1;
+    border-right: 1px solid #666;
+    padding: 0 15px;
+}
+.wrapper>.footer .copyright{
+    background: #444;
+    padding: 5px;
+}
+.copyright{
+    color: #eee;
 }
 
+/* 快速导航 */
+.nav-box .item{
+    height: 130px;
+    background: lightblue;
+}
+.nav-box a{
+    display: block;
+    height: 100%;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    padding-top: 25px;
+}
+.nav-box a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-box .fas{
+    display: block;
+    text-align: center;
+    font-size: 26px;
+}
+.nav-box .item p{
+    margin: 15px 0 0;
+}
+.nav-box .msg-portal{
+    background-image: url("../images/tmp/10.jpg");
+}
+.nav-box .mail-sys{
+    background-image: url("../images/tmp/11.jpg");
+}
+.nav-box .edu{
+    background-image: url("../images/tmp/12.jpg");
+}
+
+/* 联系方式 */
+.contact .contact-weibo,.contact-weixin{
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+.contact .contact-weixin{
+    background-image: url("../images/contact_wx2.png");
+}
+.contact .contact-weibo{
+    background-image: url("../images/contact_wb.png");
+}
+/* 图片墙 */
 .image-wall img{
     width: 100%;
 }
-
-/* box */
-.box{
-
-}
-.box>.header{
-    position: relative;
-    margin-bottom: 8px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #8c0000;;
-}
-.box>.header>h1,h2,h3,h4,h5,h6{
-    font-weight: 500;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-}
-.box>.header>.opts{
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.opts a{
-    text-decoration: none;
-    color: #333;
-    font-size: 12px;
-}
-.opts a:hover{
-    text-decoration: none;
-    color: #000;
-}
-.opts a:visited{
-    text-decoration: none;
-    color: #333;
-}
-.box .links{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-}
-.box .links>li{
-    display: block;
-    position: relative;
-    list-style: none;
-    margin-bottom: 10px;
-    padding: 3px 0;
-}
-.box .links>li::after{
-    content: ' ';
-    display: table;
-    clear: both;
-    visibility: hidden;
-}
-.box .links>li>a{
-    display: block;
-    width: 80%;
-    float: left;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-}
-.links>li .time{
-    display: block;
-    width: 20%;
-    float: left;
-    text-align: right;
-    font-size: 12px;
-    color: #444;
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-}
-
-/* 栅栏布局 */
-.cake{
-    margin-bottom: 15px;
-}
-.cake::before{
-    content: ' ';
-    display: table;
-    visibility: hidden;
-}
-.cake::after{
-    content: ' ';
-    display: table;
-    visibility: hidden;
-    clear: both;
-}
-.cake .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .chalf{
-    position: relative;
-    float: left;
-    min-height: 1px;
-    padding: 0 15px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-@media (min-width: 998px) {
-    .cake .chalf{
-        width: 50%;
-    }
-    .cake .c1{
-        width: 8.33333333%;
-    }
-    .cake .c2{
-        width: 16.66666667%;
-    }
-    .cake .c3{
-        width: 25%;
-    }
-    .cake .c4{
-        width: 33.33333333%;
-    }
-    .cake .c5{
-        width: 41.66666667%;
-    }
-    .cake .c6{
-        width: 50%;
-    }
-    .cake .c7{
-        width: 58.33333333%;
-    }
-    .cake .c8{
-        width: 66.66666667%;
-    }
-    .cake .c9{
-        width: 75%;
-    }
-    .cake .c10{
-        width: 83.33333333%;
-    }
-    .cake .c11{
-        width: 91.66666667%;
-    }
-    .cake .c12{
-        width: 100%;
-    }
-}
-
-

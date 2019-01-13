@@ -1,0 +1,142 @@
+/* 栅栏布局 */
+.cake{
+    margin-bottom: 15px;
+}
+.cake::before{
+    content: ' ';
+    display: table;
+    visibility: hidden;
+}
+.cake::after{
+    content: ' ';
+    display: table;
+    visibility: hidden;
+    clear: both;
+}
+.cake .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .chalf{
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding: 0 15px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+@media (min-width: 998px) {
+    .cake .chalf{
+        width: 50%;
+    }
+    .cake .c1{
+        width: 8.33333333%;
+    }
+    .cake .c2{
+        width: 16.66666667%;
+    }
+    .cake .c3{
+        width: 25%;
+    }
+    .cake .c4{
+        width: 33.33333333%;
+    }
+    .cake .c5{
+        width: 41.66666667%;
+    }
+    .cake .c6{
+        width: 50%;
+    }
+    .cake .c7{
+        width: 58.33333333%;
+    }
+    .cake .c8{
+        width: 66.66666667%;
+    }
+    .cake .c9{
+        width: 75%;
+    }
+    .cake .c10{
+        width: 83.33333333%;
+    }
+    .cake .c11{
+        width: 91.66666667%;
+    }
+    .cake .c12{
+        width: 100%;
+    }
+}
+
+/* box */
+.box{
+
+}
+.box>.header{
+    position: relative;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #8c0000;;
+}
+.box>.header>h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.box>.header>.opts{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.opts a{
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+}
+.opts a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.opts a:visited{
+    text-decoration: none;
+    color: #333;
+}
+.box .links{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+.box .links>li{
+    display: block;
+    position: relative;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 3px 0;
+}
+.box .links>li::after{
+    content: ' ';
+    display: table;
+    clear: both;
+    visibility: hidden;
+}
+.box .links>li>a{
+    display: block;
+    width: 80%;
+    float: left;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.links>li .time{
+    display: block;
+    width: 20%;
+    float: left;
+    text-align: right;
+    font-size: 12px;
+    color: #444;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
